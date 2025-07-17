@@ -347,11 +347,11 @@ a {
   color: var(--white-100);
   text-decoration: none;
   transition: all 0.3s ease;
+}
 
-  &:hover {
+a:hover {
     color: var(--lime);
   }
-}
 
 img {
   max-width: 100%;
@@ -387,12 +387,12 @@ img {
 .button_primary {
   background-color: var(--lime-primary);
   color: var(--black-primary);
+}
 
-  &:hover {
-    background-color: var(--lime-active);
-    transform: translateY(-2px);
-    color: var(--black-primary);
-  }
+.button_primary:hover {
+  background-color: var(--lime-active);
+  transform: translateY(-2px);
+  color: var(--black-primary);
 }
 
 .section-title {
