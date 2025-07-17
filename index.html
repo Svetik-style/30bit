@@ -423,14 +423,34 @@
                                     <img src="/images/icons/whatsapp.svg" alt="Whatsapp" />
                                 </div>
                             </div>
-                            <p class="font_body_2">Или свяжитесь с нами напрямую</p>
+                            <p class="font_body_2">Или свяжитесь с нами напрямую 	&#8594;</p>
                         </div>
                     </div>
-                    <!-- <div class="contacts-form-wrapper">
+                    <div class="contacts-form-wrapper">
                         <form class="contacts-form" action="#" method="POST" id="contactForm">
-                            
+                            <h3 class="contacts-form__title">Обратная связь</h3>
+                            <div class="contacts-form__field">
+                                <label for="email" class="font_body_2">Электронная почта</label><br>
+                                <input type="email" id="email" name="email" placeholder="Введите свою электронную почту" required>
+                            </div>
+                            <div class="contacts-form__field">
+                                <label for="tel" class="font_body_2">Номер телефона</label><br>
+                                <input type="tel" id="tel" name="tel" placeholder="+7(XXX)XXX-XX-XX" required>
+                            </div>
+                            <div class="contacts-form__field">
+                                <label for="message" class="font_body_2">Сообщение</label><br>
+                                <textarea id="message" name="message" placeholder="Оставьте заявку или напишите о том, что вас волнует" required></textarea>
+                            </div>
+                            <div id="captcha-container"></div>
+                            <button type="submit" class="button button_primary font_body_2">Отправить</button>
+                            <div class="contacts-form__consent">
+                                <input type="checkbox" id="consent" name="consent">
+                                <label for="consent" class="font_body_4">
+                                    Я согласен(-а) на обработку <a href="#" target="_blank">персональных данных.</a>
+                                </label>
+                            </div>
                         </form>
-                    </div> -->
+                    </div>
                     <div class="contacts__image">
                         <img src="/images/contact/contact.png" alt="Фон" />
                     </div>
