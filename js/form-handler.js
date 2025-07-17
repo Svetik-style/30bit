@@ -3,6 +3,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const captchaContainer = document.getElementById("captcha-container");
   const form = document.getElementById("contactForm");
   const consentCheckbox = document.getElementById("consent");
+  const emailInput = document.getElementById("email");
+  const telInput = document.getElementById("tel");
+
+  // Для валидации
+  const emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const telReg = /^\+7\(\d{3}\)\d{3}-\d{2}-\d{2}$/;
 
   let captchaToken = "";
 
@@ -19,6 +25,18 @@ document.addEventListener("DOMContentLoaded", function () {
   // Обработка отправки формы
   form.addEventListener("submit", async function (e) {
     e.preventDefault();
+
+    if (!emailReg.test(emailInput.value)) {
+      alert("Пожалуйста, введите корректную почту(например, ivanov@mail.ru)");
+      emailInput.focus;
+      return;
+    }
+
+    if (!telReg.test(telInput.value)) {
+      alert("Пожалуйста, введите телефон в формате +7(XXX)XXX-XX-XX");
+      telInput.focus;
+      return;
+    }
 
     // Проверка капчи
     if (!captchaToken) {
