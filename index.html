@@ -430,24 +430,27 @@
                         <form class="contacts-form" action="#" method="POST" id="contactForm">
                             <h3 class="contacts-form__title">Обратная связь</h3>
                             <div class="contacts-form__field">
-                                <label for="email" class="font_body_2">Электронная почта</label><br>
+                                <label for="email" class="font_body_4">Электронная почта</label>
                                 <input type="email" id="email" name="email" placeholder="Введите свою электронную почту" required>
+                                <div id="email-error" class="error-message"></div>
                             </div>
                             <div class="contacts-form__field">
-                                <label for="tel" class="font_body_2">Номер телефона</label><br>
-                                <input type="tel" id="tel" name="tel" placeholder="+7(XXX)XXX-XX-XX" required>
+                                <label for="tel" class="font_body_4">Номер телефона</label>
+                                <input type="tel" id="tel" name="tel" maxlength="18" placeholder="+7 (___) ___-__-__" required>
+                                <div id="tel-error" class="error-message"></div>
                             </div>
                             <div class="contacts-form__field">
-                                <label for="message" class="font_body_2">Сообщение</label><br>
+                                <label for="message" class="font_body_4">Сообщение</label>
                                 <textarea id="message" name="message" placeholder="Оставьте заявку или напишите о том, что вас волнует" required></textarea>
                             </div>
                             <div id="captcha-container"></div>
-                            <button type="submit" class="button button_primary font_body_2">Отправить</button>
+                            <button type="submit" class="button button_primary font_body_4">Отправить</button>
                             <div class="contacts-form__consent">
                                 <input type="checkbox" id="consent" name="consent">
-                                <label for="consent" class="font_body_4">
+                                <label for="consent" class="font_body_6">
                                     Я согласен(-а) на обработку <a href="#" target="_blank">персональных данных.</a>
                                 </label>
+                                <div id="consent-error" class="error-message"></div>
                             </div>
                         </form>
                     </div>
